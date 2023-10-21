@@ -1,0 +1,10 @@
+event yang dibuat > tanggal sekarang untuk bisa menambhakan kedalam trip
+
+
+jika dibiarkan pas input admin :
+1. pengecekan hanya saat pengisian dengan menggunakan if
+2. pilihan kedua : ketika memilih jika tanggal kurang dari tanggal sekarang maka nilai default langsung 0
+
+jika dibiarkan pas sampai pemesanan :
+1. harus pengecekan tanggal dulu
+2. kemudian harus disable tombol 
