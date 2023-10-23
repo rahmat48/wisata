@@ -1,15 +1,13 @@
 @extends('halamanuser.templateuser')
 
 @section('kontenuser')
-<header style="background: url({{asset('header/headerberita.jpg')}}); background-position: center center; background-repeat: no repeat">
-  <div class="container px-4 text-center">
-      <center><h2>Sekilas Tentang Desa Wunut </h2>
-    <hr style="width: 280px;  
-    background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #0d6efd));  
-    height: 3px;
-    border: none;"></center>
-  </div>
-</header>
+<div class="container" style="margin-top: 8%">
+  <center><h2>Sekilas Tentang Desa Wunut</h2>
+      <hr style="width: 280px;  
+      background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #0d6efd));  
+      height: 3px;
+      border: none;"></center>
+</div>
 <!-- Begin Page Content -->
 <div class="container-fluid" style="margin-top:2%">
 <!-- Page Heading -->

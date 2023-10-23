@@ -96,4 +96,16 @@ class usercontroller extends Controller
             return redirect('trip')->with('success', 'Terimakasih telah memesan, Data Bisa Dicek di History');
         }
     }
+    public function search(Request $request)
+    {
+        $query = $request->get('query');
+        $berita = beritadesa::where('judul', 'like', '%' . $query . '%')->get();
+        return response()->json($berita);
+    }
+    public function search2(Request $request)
+    {
+        $query = $request->get('query');
+        $berita = eventdesa::where('judul', 'like', '%' . $query . '%')->get();
+        return response()->json($berita);
+    }
 }

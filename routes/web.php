@@ -49,13 +49,19 @@ Route::get('/trip', [usercontroller::class, 'tripdesa'])->name('trip');
 Route::post('/pemesanan_post',[usercontroller::class, 'pesanan'])->name('pemesanan_post');
 
 //Detail --Fitur User--
-Route::get('/detailpesanan', [detailcontroller::class, 'detailpesanan'])->name('detailpesanan');
+
 Route::get('/detailberita/{id}',[detailcontroller::class, 'detailberita'])->name('detailberita');
 Route::get('/detailevent/{id}',[detailcontroller::class, 'detailevent'])->name('detailevent');
 Route::get('/detailwisata/{id}',[detailcontroller::class, 'detailwisata'])->name('detailwisata');
 Route::get('/detailkuliner/{id}',[detailcontroller::class, 'detailkuliner'])->name('detailkuliner');
 Route::get('/detailtrip/{id}',[detailcontroller::class, 'detailtrip'])->name('detailtrip');
+Route::get('/cari', [usercontroller::class, 'search'])->name('live.search');
+Route::get('/cari2', [usercontroller::class, 'search2'])->name('live.search2');
 
+//Route untuk membatasi pengunjung supaya tidak bisa masuk kedalam halaman detail pesanan
+Route::group(['middleware' => ['auth', 'ceklevel:user']], function(){
+    Route::get('/detailpesanan', [detailcontroller::class, 'detailpesanan'])->name('detailpesanan');
+});
 //Route untuk membatasi user tidak bisa masuk kedalam halaman Dashboard admin
 Route::group(['middleware' => ['auth', 'ceklevel:admin']], function(){
     Route::get('/admin', function () {return view('HomeAdmin');})->name('admin');

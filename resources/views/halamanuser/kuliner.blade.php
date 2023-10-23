@@ -1,11 +1,11 @@
 @extends('halamanuser.templateuser')
 
 @section('kontenuser')
-<header style="background: url({{asset('header/headerberita.jpg')}}); background-position: center center; background-repeat: no repeat">
+<header style="background: url({{asset('header/headerkuliner.jpg')}}); background-position: center center; background-repeat: no repeat">
     <div class="container px-4 text-center">
-        <center><h2>Kuliner Desa Wunut</h2>
+        <center><h2 class="fw-bolder" style="color: #ffffff">Kuliner Desa Wunut</h2>
       <hr style="width: 280px;  
-      background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #0d6efd));  
+      background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #ffffff));  
       height: 3px;
       border: none;"></center>
     </div>

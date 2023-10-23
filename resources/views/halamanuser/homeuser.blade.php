@@ -40,7 +40,8 @@
 					@foreach($wisata as $item)
 					<div class="col" >
 						<div class="card shadow" style="width: 18rem; margin-bottom:5%">
-							<img class="card-img-top" style="height: 150px" src="{{ asset('image_tempatwisata')}}/{{$item->gambar}}" alt="Card image cap">
+							<img class="card-img-top" style="height: 150px" src="{{ asset('image_tempatwisata')}}/{{$item->gambar}}" 
+							alt="Card image cap">
 							<div class="card-body">
 							<center><h5 class="card-title">{{$item->nama}}</h5></center>
 							<p class="card-text" style="text-align: justify">{{ Str::limit($item->deskripsi, '150', '...')}}</p>
